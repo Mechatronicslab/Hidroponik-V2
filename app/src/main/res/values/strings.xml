@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Vertical Garden Agriculture</string>
+
+    <string-array name="steps">
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+</resources>
