@@ -41,4 +41,16 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation files('libs/jackson-databind-2.0.0.jar')
+
+    //preference
+    implementation 'net.grandcentrix.tray:tray:0.12.0'
+    implementation 'com.android.support:multidex:1.0.1'
+
+    //retorofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+    //pojo
+    compileOnly 'javax.annotation:jsr250-api:1.0'
 }

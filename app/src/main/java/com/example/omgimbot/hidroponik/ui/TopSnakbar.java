@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.androidadvance.topsnackbar.TSnackbar;
-import com.example.omgimbot.hidroponik_v2.R;
+import com.example.omgimbot.hidroponik.R;
 
 
 /**

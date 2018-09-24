@@ -19,10 +19,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.omgimbot.hidroponik.features.auth.model.LoginResponse;
 import com.example.omgimbot.hidroponik.ui.CustomDrawable;
 import com.example.omgimbot.hidroponik.ui.TopSnakbar;
 import com.example.omgimbot.hidroponik.utils.Utils;
-import com.example.omgimbot.hidroponik_v2.R;
+import com.example.omgimbot.hidroponik.R;
 import com.google.gson.Gson;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.shuhart.stepview.StepView;
@@ -83,11 +84,17 @@ public class AuthActivity extends AppCompatActivity implements IAuthView,View.On
     SwitchCompat mVerificationSwitch;
     @BindView(R.id.more_image)
     ImageView mMoreImage;
+
+    AuthPresenter presenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
         ButterKnife.bind(this);
+        presenter = new AuthPresenter(this);
+        /*if (presenter.isLoggedIn())
+            this.goToDashboard();
+        else this.initViews();*/
         initViews();
     }
 
@@ -268,10 +275,11 @@ public class AuthActivity extends AppCompatActivity implements IAuthView,View.On
 
     @Override
     public void signIn() {
-        /*presenter.login(
+        presenter.login(
                 mUserLoginEdit.getText().toString(),
                 mPasswordLoginEdit.getText().toString()
-        );*/
+        );
+
     }
 
     @Override
@@ -289,12 +297,12 @@ public class AuthActivity extends AppCompatActivity implements IAuthView,View.On
     }
 
     @Override
-    public void onSigninSuccess(/*LoginResponse response*/) {
+    public void onSigninSuccess(LoginResponse response) {
         Log.i(TAG, "Login success");
         /*presenter.storeProfile(new Gson().toJson(response));
         presenter.storeAccessToken(response.getResult().getAccessToken());*/
         Toast.makeText(this, "Signin berhasil", Toast.LENGTH_SHORT).show();
-        this.goToDashboard();
+        //this.goToDashboard();
     }
 
     @Override
@@ -303,13 +311,15 @@ public class AuthActivity extends AppCompatActivity implements IAuthView,View.On
         /*SweetDialogs.commonSuccess(this, response.getRm(), string -> {
             this.showSigninForm();
         });*/
+
     }
 
     @Override
-    public void onRequestFailed(String rm, String rc) {
+    public void onRequestFailed(String rm) {
         Log.e(TAG, rm);
         /*SweetDialogs.commonWarning(this, "Gagal memuat permintaan",
                 rm, false);*/
+        Toast.makeText(this, rm, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -352,7 +362,7 @@ public class AuthActivity extends AppCompatActivity implements IAuthView,View.On
                 methodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
                 break;
             case R.id.signup_text:
-                //isSigninScreen = false;
+                isSigninScreen = false;
                 this.showSignupForm();
                 break;
             case R.id.next_button:

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="hidroponik_API_endpoint">http://172.31.1.138:8080/</string>
+        <string name="semut_WS_endpoint">ws://167.205.7.226:8081/</string>
+
+        <string name="fake_key">pk.fakekey</string>
+        <string name="style_url">http://167.205.7.235:8081/styles/osm-bright/style.json</string>
+        <string name="osrm_pptik">http://osrm.pptik.id/route/v1/driving/</string>
+        <string name="nominatim_pptik">http://167.205.7.235/nominatim/search/</string>
+        <string name="pt_id">1005</string>
+        <string name="pt_type">motor</string>
+
+</resources>
