@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.omgimbot.hidroponik.features.auth.AuthActivity">
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,7 +15,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBlackTrans"
+        android:background="@color/cpb_green_dark"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -24,88 +25,91 @@
             android:layout_weight="17"
             android:background="@color/fadeWhite2"
             android:orientation="horizontal">
+
             <com.example.omgimbot.hidroponik.ui.VerticalTextView
                 android:id="@+id/signin_invoker_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_gravity="center"
-                android:paddingTop="15dp"
-                android:text="Signin"
+                android:background="@color/cpb_green_dark"
+                android:fontFamily="@font/nanum_regular"
+                android:gravity="center"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
+                android:paddingTop="15dp"
                 android:rotation="180"
+                android:text="Signin"
                 android:textAllCaps="true"
                 android:textColor="@color/colorPrimary"
-                android:background="@color/colorPrimaryDark"
-                android:fontFamily="@font/nanum_regular"
-                android:textStyle="bold"
                 android:textSize="20sp"
-                android:visibility="gone"/>
+                android:textStyle="bold"
+                android:visibility="gone" />
 
             <include
                 android:id="@+id/signin_content"
                 layout="@layout/layout_signin"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"/>
-
+                android:gravity="center" />
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/signup_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/cpb_green_dark"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_gravity="center"
-                android:rotation="180"
-                android:background="@color/colorPrimaryDark">
+                android:background="@color/cpb_green_dark"
+                android:orientation="vertical"
+                android:rotation="180">
+
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:visibility="visible"
                     android:id="@+id/more_image"
-                    android:adjustViewBounds="true"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
                     android:paddingBottom="15dp"
                     android:src="@mipmap/ic_launcher_round"
-                    />
+                    android:visibility="visible" />
+
                 <com.example.omgimbot.hidroponik.ui.VerticalTextView
                     android:id="@+id/signup_invoker_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:rotation="180"
-                    android:paddingTop="15dp"
-                    android:text="Signup"
-                    android:background="@color/colorPrimary"
                     android:layout_gravity="center"
-                    android:padding="15dp"
+                    android:background="@color/colorPrimary"
                     android:fontFamily="@font/nanum_regular"
-                    android:textStyle="bold"
+                    android:padding="15dp"
+                    android:paddingTop="15dp"
+                    android:rotation="180"
+                    android:text="Signup"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="20sp"
+                    android:textStyle="bold"
                     android:visibility="visible" />
 
             </LinearLayout>
-
 
             <include
                 android:id="@+id/signup_content"
                 layout="@layout/layout_signup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"/>
+                android:gravity="center" />
+
         </LinearLayout>
 
     </LinearLayout>
+
     <RelativeLayout
         android:id="@+id/loading_layout"
         android:layout_width="match_parent"
@@ -120,8 +124,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:clickable="false" />
+
     </RelativeLayout>
-
-
 
 </android.support.constraint.ConstraintLayout>

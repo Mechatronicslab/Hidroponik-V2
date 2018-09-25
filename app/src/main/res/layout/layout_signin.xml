@@ -9,13 +9,12 @@
     android:padding="15dp">
 
     <ImageView
-        android:layout_width="115dp"
-        android:layout_height="115dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
         android:adjustViewBounds="true"
         android:paddingBottom="20dp"
         android:scaleType="centerInside"
-        android:src="@drawable/logo_hidro" />
-
+        android:src="@drawable/icon" />
 
     <android.support.v7.widget.CardView
         android:id="@+id/search_holder"
@@ -41,7 +40,9 @@
                 android:hint="Email/Phone/Username"
                 android:inputType="text"
                 android:textColor="@color/colorPrimaryDark" />
+
         </android.support.design.widget.TextInputLayout>
+
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
@@ -67,28 +68,31 @@
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:textColor="@color/colorPrimaryDark" />
+
         </android.support.design.widget.TextInputLayout>
+
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/signin_button"
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="5dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/bg_square_primary_rounded"
         android:fontFamily="@font/nanum_extra_old"
         android:text="Masuk"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
-        />
+        android:textColor="@color/cpb_green_dark"
+        android:textStyle="bold" />
+
     <TextView
-        android:fontFamily="@font/nanum_bold"
-        android:layout_marginTop="15dp"
         android:id="@+id/signup_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/nanum_bold"
         android:text="Belum Punya Akun? Daftar"
-        />
+        android:textColor="@color/cpb_green_dark" />
+
 </LinearLayout>

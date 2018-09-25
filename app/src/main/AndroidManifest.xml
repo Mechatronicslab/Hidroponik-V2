@@ -13,9 +13,13 @@
         <activity android:name="com.example.omgimbot.hidroponik.features.auth.AuthActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.omgimbot.hidroponik.Dashboard"
+            android:theme="@style/App" />
     </application>
 
 </manifest>

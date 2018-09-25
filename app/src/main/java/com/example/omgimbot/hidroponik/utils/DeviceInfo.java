@@ -1,4 +1,5 @@
 package com.example.omgimbot.hidroponik.utils;
+
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -253,7 +254,7 @@ public class DeviceInfo {
             } catch (IllegalAccessException e) {
                 Log.e(TAG, "Google Play Services not available");
             } catch (Exception e) {
-                Log.e(TAG,"Error when checking for Google Play Services: " + e);
+                Log.e(TAG, "Error when checking for Google Play Services: " + e);
             }
             return false;
         }
@@ -335,7 +336,9 @@ public class DeviceInfo {
         return getCachedInfo().limitAdTrackingEnabled;
     }
 
-    public boolean isGooglePlayServicesEnabled() throws IOException { return getCachedInfo().gpsEnabled; }
+    public boolean isGooglePlayServicesEnabled() throws IOException {
+        return getCachedInfo().gpsEnabled;
+    }
 
     public Location getMostRecentLocation() {
         if (!isLocationListening()) {

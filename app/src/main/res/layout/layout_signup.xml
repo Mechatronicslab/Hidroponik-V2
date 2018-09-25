@@ -4,14 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/cpb_green_dark"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="15dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-
         android:layout_height="match_parent">
 
         <LinearLayout
@@ -47,7 +46,9 @@
                         android:hint="Nama Lengkap"
                         android:inputType="text|textCapWords"
                         android:textColor="@color/colorPrimaryDark" />
+
                 </android.support.design.widget.TextInputLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -74,8 +75,11 @@
                         android:hint="Username"
                         android:inputType="text"
                         android:textColor="@color/colorPrimaryDark" />
+
                 </android.support.design.widget.TextInputLayout>
+
             </android.support.v7.widget.CardView>
+
         </LinearLayout>
 
         <LinearLayout
@@ -124,14 +128,15 @@
                     android:fontFamily="@font/nanum_regular"
                     android:text="Nomor Telepon"
                     android:textColor="@color/colorPrimary" />
+
             </LinearLayout>
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                app:cardCornerRadius="2dp"
                 android:visibility="gone"
+                app:cardCornerRadius="2dp"
                 app:cardElevation="3dp"
                 app:cardMaxElevation="2dp"
                 app:cardUseCompatPadding="true"
@@ -153,6 +158,7 @@
                         android:textColor="@color/colorPrimaryDark"
                         android:visibility="gone" />
                 </android.support.design.widget.TextInputLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -179,8 +185,11 @@
                         android:hint="phone number"
                         android:inputType="phone"
                         android:textColor="@color/colorPrimaryDark" />
+
                 </android.support.design.widget.TextInputLayout>
+
             </android.support.v7.widget.CardView>
+
         </LinearLayout>
 
         <LinearLayout
@@ -214,7 +223,9 @@
                         android:hint="Password"
                         android:inputType="textPassword"
                         android:textColor="@color/colorPrimaryDark" />
+
                 </android.support.design.widget.TextInputLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -240,8 +251,11 @@
                         android:hint="Ulangi Password"
                         android:inputType="textPassword"
                         android:textColor="@color/colorPrimaryDark" />
+
                 </android.support.design.widget.TextInputLayout>
+
             </android.support.v7.widget.CardView>
+
         </LinearLayout>
 
         <LinearLayout
@@ -300,6 +314,7 @@
                     app:sv_stepPadding="5dp"
                     app:sv_steps="@array/steps"
                     app:sv_typeface="@font/nanum_regular" />
+
             </RelativeLayout>
 
             <Button
@@ -310,9 +325,9 @@
                 android:text="Signup"
                 android:textStyle="bold"
                 android:visibility="gone" />
+
         </LinearLayout>
+
     </RelativeLayout>
-
-
 
 </LinearLayout>

@@ -13,11 +13,9 @@
     <color name="green">#01ab0d</color>
     <color name="black">#000000</color>
 
-
     <color name="colorPrimaryTrans">#a0673AB7</color>
     <color name="colorAccentTrans">#a0ededed</color>
     <color name="colorBlackTrans">#a0000000</color>
-
 
     <color name="blue_btn_bg_color">#2c2c54</color>
     <color name="blue_btn_bg_pressed_color">#414178</color>
@@ -44,6 +42,7 @@
         <item>@color/pocket_color_4</item>
         <item>@color/pocket_color_4</item>
     </integer-array>
+
     <color name="pocket_color_1">#85edb9</color>
     <color name="pocket_color_2">#34bdb7</color>
     <color name="pocket_color_3">#ee4458</color>
@@ -373,7 +372,6 @@
     <color name="material_brown_800">#4e342e</color>
     <color name="material_brown_900">#3e2722</color>
 
-
     <color name="main_color_500">@color/material_purple_500</color>
     <color name="main_color_50">@color/material_purple_50</color>
     <color name="main_color_100">@color/material_purple_100</color>
@@ -399,7 +397,6 @@
     <color name="main_color_grey_800">@color/material_grey_800</color>
     <color name="main_color_grey_900">@color/material_grey_900</color>
 
-
     <!-- PLEASE NOTE: Since adding transparency to already
     defined colors is not supported through xml, we have
     to add them manually. This means: we have used purple
@@ -422,7 +419,6 @@
     <color name="book_loading_book">@color/colorAccent</color>
     <color name="book_loading_page">@color/colorPrimary</color>
 
-
     <color name="cpb_grey">#ffdedede</color>
     <color name="cpb_blue">#ff0099cc</color>
     <color name="cpb_blue_dark">#ff00719b</color>
@@ -432,7 +428,6 @@
     <color name="cpb_green_dark">#ff6d9b00</color>
     <color name="cpb_white">@android:color/white</color>
     <color name="email_color">#e0e2e2</color>
-
 
     <color name="facebook_color">#3b5998</color>
     <color name="googleplus_color">#9a3333</color>

@@ -19,11 +19,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.omgimbot.hidroponik.features.auth.model.LoginResponse;
+import com.example.omgimbot.hidroponik.Dashboard;
 import com.example.omgimbot.hidroponik.ui.CustomDrawable;
 import com.example.omgimbot.hidroponik.ui.TopSnakbar;
 import com.example.omgimbot.hidroponik.utils.Utils;
-import com.example.omgimbot.hidroponik.R;
+import com.example.omgimbot.hidroponik_v2.R;
 import com.google.gson.Gson;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.shuhart.stepview.StepView;
@@ -31,7 +31,7 @@ import com.shuhart.stepview.StepView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class AuthActivity extends AppCompatActivity implements IAuthView,View.OnClickListener {
+public class AuthActivity extends AppCompatActivity implements IAuthView, View.OnClickListener {
     private boolean isSigninScreen = true;
     private final String TAG = "Auth Activity";
     private int currentStep = 0;
@@ -85,21 +85,16 @@ public class AuthActivity extends AppCompatActivity implements IAuthView,View.On
     @BindView(R.id.more_image)
     ImageView mMoreImage;
 
-    AuthPresenter presenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
         ButterKnife.bind(this);
-        presenter = new AuthPresenter(this);
-        /*if (presenter.isLoggedIn())
-            this.goToDashboard();
-        else this.initViews();*/
         initViews();
     }
 
     @Override
-    public void initViews(){
+    public void initViews() {
         String tmp = "Belum punya akun? <b>DAFTAR</b>";
         mSignupText.setText(Html.fromHtml(tmp));
         mSignupText.setOnClickListener(this);
@@ -162,7 +157,6 @@ public class AuthActivity extends AppCompatActivity implements IAuthView,View.On
         mSignupLayout.startAnimation(translate);
         Animation clockwise = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_right_to_left);
         mSignupButton.startAnimation(clockwise);
-
     }
 
     @Override
@@ -275,11 +269,13 @@ public class AuthActivity extends AppCompatActivity implements IAuthView,View.On
 
     @Override
     public void signIn() {
-        presenter.login(
+        /*presenter.login(
                 mUserLoginEdit.getText().toString(),
                 mPasswordLoginEdit.getText().toString()
-        );
-
+        );*/
+        Intent a = new Intent(this, Dashboard.class);
+        startActivity(a);
+        finish();
     }
 
     @Override
@@ -297,12 +293,12 @@ public class AuthActivity extends AppCompatActivity implements IAuthView,View.On
     }
 
     @Override
-    public void onSigninSuccess(LoginResponse response) {
+    public void onSigninSuccess(/*LoginResponse response*/) {
         Log.i(TAG, "Login success");
         /*presenter.storeProfile(new Gson().toJson(response));
         presenter.storeAccessToken(response.getResult().getAccessToken());*/
         Toast.makeText(this, "Signin berhasil", Toast.LENGTH_SHORT).show();
-        //this.goToDashboard();
+        this.goToDashboard();
     }
 
     @Override
@@ -311,15 +307,13 @@ public class AuthActivity extends AppCompatActivity implements IAuthView,View.On
         /*SweetDialogs.commonSuccess(this, response.getRm(), string -> {
             this.showSigninForm();
         });*/
-
     }
 
     @Override
-    public void onRequestFailed(String rm) {
+    public void onRequestFailed(String rm, String rc) {
         Log.e(TAG, rm);
         /*SweetDialogs.commonWarning(this, "Gagal memuat permintaan",
                 rm, false);*/
-        Toast.makeText(this, rm, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -330,7 +324,7 @@ public class AuthActivity extends AppCompatActivity implements IAuthView,View.On
 
     @Override
     public void goToDashboard() {
-       // startActivity(new Intent(this, TrackingActivity.class));
+        // startActivity(new Intent(this, TrackingActivity.class));
         finish();
     }
 
@@ -362,7 +356,7 @@ public class AuthActivity extends AppCompatActivity implements IAuthView,View.On
                 methodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
                 break;
             case R.id.signup_text:
-                isSigninScreen = false;
+                //isSigninScreen = false;
                 this.showSignupForm();
                 break;
             case R.id.next_button:
